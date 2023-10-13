@@ -10,10 +10,8 @@ import {RecipeService} from "../../recipe.service";
 export class RecipeItemComponent {
   @Input() recipe: Recipe;
   // @Output() recipeSelected = new EventEmitter<void>();
+  @Input() index: number;
 
   constructor(private recipeService: RecipeService) {
-  }
-  onSelected() {
-    this.recipeService.recipeSelected.emit(this.recipe);
   }
 }

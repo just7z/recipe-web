@@ -1,8 +1,8 @@
 <a
-  href="#"
   class="list-group-item clearfix"
-  (click)="onSelected()"
-  style="margin-bottom: 10px">
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  style="margin-bottom: 10px; cursor: pointer;">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
     <p class="list-group-item-text">{{ recipe.description }}</p>
