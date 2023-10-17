@@ -6,7 +6,7 @@ input {
   margin-bottom: 5px;
 }
 
-input.ng-invalid,
-textarea.ng-invalid {
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
   border: 1px solid red;
 }
