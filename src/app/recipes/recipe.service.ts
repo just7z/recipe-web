@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 })
 export class RecipeService {
   recipeChanged = new Subject<Recipe[]>();
+
   private recipes: Recipe[] = [
     new Recipe(
       'Steak and Eggs',
@@ -31,11 +32,11 @@ export class RecipeService {
   constructor(private shoppingListService: ShoppingListService) { }
 
   getRecipes() {
-    return this.recipes;
+    return this.recipes.slice();
   }
 
-  getRecipe(id: number) {
-    return this.recipes[id];
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
