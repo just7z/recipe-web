@@ -24,4 +24,15 @@ export class AuthService {
       }
     );
   }
+
+  login(email: string, password: string) {
+    return this.http.post(
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDDdzHjIdiJxNfllvrLWTXl53ZP13pLoYo',
+      {
+        email: email,
+        password: password,
+        returnSecureToken: true
+      }
+    )
+  }
 }
