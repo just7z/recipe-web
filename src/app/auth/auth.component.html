@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12 col-md-6 col-md-offset-3">
-    <div class="alert alert-danger" *ngIf="error">
+    <div *ngIf="error" class="alert alert-danger">
       <p>{{ error }}</p>
     </div>
     <div *ngIf="isLoading" style="text-align: center">
@@ -10,33 +10,33 @@
       <div class="form-group">
         <label for="email">E-Mail</label>
         <input
-          type="email"
-          id="email"
           class="form-control"
-          ngModel
-          name="email"
-          required
           email
+          id="email"
+          name="email"
+          ngModel
+          required
+          type="email"
         />
       </div>
       <div class="form-group">
         <label for="password">Password</label>
         <input
-          type="password"
-          id="password"
           class="form-control"
-          ngModel
-          name="password"
-          required
+          id="password"
           minlength="6"
+          name="password"
+          ngModel
+          required
+          type="password"
         />
       </div>
       <div>
-        <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">
+        <button [disabled]="!authForm.valid" class="btn btn-primary" type="submit">
           {{ isLoginMode ? 'Login' : 'Sign Up' }}
         </button>
         |
-        <button class="btn btn-primary" (click)="onSwitchMode()" type="button">
+        <button (click)="onSwitchMode()" class="btn btn-primary" type="button">
           Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}
         </button>
       </div>

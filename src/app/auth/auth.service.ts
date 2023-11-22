@@ -17,13 +17,14 @@ export interface AuthResponseData {
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
-  user= new BehaviorSubject<User>(null);
+  user = new BehaviorSubject<User>(null);
   private tokenExpirationTimer: any;
 
   constructor(
     private http: HttpClient,
     private router: Router
-  ) {}
+  ) {
+  }
 
   signup(email: string, password: string) {
     return this.http.post<AuthResponseData>(
@@ -34,13 +35,13 @@ export class AuthService {
         returnSecureToken: true
       }
     ).pipe(catchError(this.handleError), tap(resData => {
-      this.handleAuthentication(
-        resData.email,
-        resData.localId,
-        resData.idToken,
-        +resData.expiresIn
-      );
-    })
+        this.handleAuthentication(
+          resData.email,
+          resData.localId,
+          resData.idToken,
+          +resData.expiresIn
+        );
+      })
     );
   }
 
@@ -53,13 +54,13 @@ export class AuthService {
         returnSecureToken: true
       }
     ).pipe(catchError(this.handleError), tap(resData => {
-      this.handleAuthentication(
-        resData.email,
-        resData.localId,
-        resData.idToken,
-        +resData.expiresIn
-      );
-    })
+        this.handleAuthentication(
+          resData.email,
+          resData.localId,
+          resData.idToken,
+          +resData.expiresIn
+        );
+      })
     );
   }
 
