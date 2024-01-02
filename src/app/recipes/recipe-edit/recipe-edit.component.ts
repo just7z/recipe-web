@@ -18,7 +18,7 @@ export class RecipeEditComponent implements OnInit {
               private router: Router) {
   }
 
-  get recipeControls() {
+  get ingredientsControls() {
     return (this.recipeForm.get('ingredients') as FormArray).controls;
   }
 
