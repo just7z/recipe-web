@@ -38,12 +38,16 @@
         />
       </div>
       <div>
-        <button [disabled]="!authForm.valid" class="btn btn-primary" type="submit">
-          {{ isLoginMode ? 'Login' : 'Sign Up' }}
+        <button
+          [disabled]="!authForm.valid"
+          class="btn btn-primary"
+          type="submit"
+        >
+          {{ isLoginMode ? "Login" : "Sign Up" }}
         </button>
         |
         <button (click)="onSwitchMode()" class="btn btn-primary" type="button">
-          Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}
+          Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
         </button>
       </div>
     </form>

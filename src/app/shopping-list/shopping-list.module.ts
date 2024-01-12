@@ -11,10 +11,8 @@ import { LoggingService } from '../logging.service';
   declarations: [ShoppingListComponent, ShoppingEditComponent],
   imports: [
     FormsModule,
-    RouterModule.forChild([
-      { path: '', component: ShoppingListComponent },
-    ]),
-    SharedModule
+    RouterModule.forChild([{ path: '', component: ShoppingListComponent }]),
+    SharedModule,
   ],
   // providers: [LoggingService]
 })

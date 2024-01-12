@@ -12,19 +12,17 @@ import { LoggingService } from '../logging.service';
     AlertComponent,
     LoadingSpinnerComponent,
     PlaceholderDirective,
-    DropdownDirective
-    ],
-  imports: [
-    CommonModule
-    ],
+    DropdownDirective,
+  ],
+  imports: [CommonModule],
   exports: [
     AlertComponent,
     LoadingSpinnerComponent,
     PlaceholderDirective,
     DropdownDirective,
-    CommonModule
-    ],
-//   entryComponents: [AlertComponent]
+    CommonModule,
+  ],
+  //   entryComponents: [AlertComponent]
   // providers: [LoggingService]
 })
 export class SharedModule {}
